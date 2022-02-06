@@ -19,12 +19,12 @@
 //        out.println("</html>");
 //    }
 //}
-
-import javax.servlet.http.*;
 import javax.servlet.*;
+import javax.servlet.http.*;
 import java.io.*;
-public class DemoServlet extends HttpServlet{
-    public void doGet(HttpServletRequest req,HttpServletResponse res)
+
+public class WebServlet extends HttpServlet{
+    public void service(HttpServletRequest req,HttpServletResponse res)
             throws ServletException,IOException
     {
         res.setContentType("text/html");//setting the content type
@@ -32,7 +32,7 @@ public class DemoServlet extends HttpServlet{
 
         //writing html in the stream
         pw.println("<html><body>");
-        pw.println("Welcome to servlet");
+        pw.println("Bonjour Elie El Helou!");
         pw.println("</body></html>");
 
         pw.close();//closing the stream
